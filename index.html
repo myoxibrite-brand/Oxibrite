@@ -435,6 +435,7 @@
         const name = encodeURIComponent(document.getElementById('o_name').value.trim());
         const city = encodeURIComponent(document.getElementById('o_city').value.trim());
         const house = encodeURIComponent(document.getElementById('o_house').value.trim());
+        const pincode = encodeURIComponent(document.getElementById('o_pincode').value.trim());
         const nearby = encodeURIComponent(document.getElementById('o_nearby').value.trim());
         const mobile = encodeURIComponent(document.getElementById('o_mobile').value.trim());
         if(!name||!city||!house||!nearby||!mobile){ alert('Please fill all fields'); return; }
@@ -469,3 +470,4 @@
   </script>
 </body>
 </html>
+

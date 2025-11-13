@@ -261,6 +261,7 @@
              
             </div>
           </div>
+
           <!-- STAR RATING + BADGES -->
 <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px">
   <div style="display:flex;align-items:center;gap:4px">
@@ -283,6 +284,7 @@
             </ol>
           </div>
         </div>
+        
 
         <aside>
   <div class="card">
@@ -369,6 +371,7 @@
           <input type="text" id="o_name" placeholder="Name" required />
           <input type="text" id="o_city" placeholder="City" required />
           <input type="text" id="o_house" placeholder="House / Flat no." required />
+          <input type="text" id="o_pincode" placeholder="Pincode" required />
           <input type="text" id="o_nearby" placeholder="Near by (landmark)" required />
           <input type="tel" id="o_mobile" placeholder="Mobile no" pattern="[0-9+ ]{7,20}" required />
         </div>
@@ -447,14 +450,17 @@
         const name = encodeURIComponent(document.getElementById('o_name').value.trim());
         const city = encodeURIComponent(document.getElementById('o_city').value.trim());
         const house = encodeURIComponent(document.getElementById('o_house').value.trim());
-         const pincode = encodeURIComponent(document.getElementById('o_pincode').value.trim());
+        const pincode = encodeURIComponent(document.getElementById('o_pincode').value.trim());
         const nearby = encodeURIComponent(document.getElementById('o_nearby').value.trim());
         const mobile = encodeURIComponent(document.getElementById('o_mobile').value.trim());
-        if(!name||!city||!house||!nearby||!mobile){ alert('Please fill all fields'); return; }
+        if(!name||!city||!house||!pincode||!nearby||!mobile){ alert('Please fill all fields'); return; }
 
-        const message = `Hello%20Oxibrite%20team%2C%20I%20would%20like%20to%20order%20Oxibrite%20sanitary%20pads.%0A%0AName%3A%20${name}%0ACity%3A%20${city}%0AHouse%20No%3A%20${house}%0ANearby%20%28landmark%29%3A%20${nearby}%0AMobile%3A%20${mobile}%0A%0APlease%20confirm%20availability%20and%20delivery.`;
+        const message = `Hello Oxibrite team, I would like to order Oxibrite sanitary pads.%0A%0AName: ${name}%0ACity: ${city}%0AHouse No: ${house}%0APincode: ${pincode}%0ANearby (landmark): ${nearby}%0AMobile: ${mobile}%0A%0APlease confirm availability and delivery.`;
 
-        const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+        // encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+
+        const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
         // Open WhatsApp in new tab (mobile will open the app)
         window.open(waLink, '_blank');
         hideModal();
@@ -482,6 +488,3 @@
   </script>
 </body>
 </html>
-
-
-

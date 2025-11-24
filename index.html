@@ -1,1 +1,778 @@
-<!doctype html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Oxibrite Sanitary Pad — Comfort & Confidence</title> <meta name="description" content="Oxibrite sanitary pad — comfortable, leak-proof, breathable. Official product page." /> <style> :root{ --brand:#6d245b; /* deep purple */ --accent:#1182b4; /* bright blue */ --muted:#6b6b6b; --bg:#fffdfc; --max-width:1100px; --radius:14px; } *{box-sizing:border-box} html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#fff 0%, #f9fbff 100%); color:#222} a{color:var(--brand);text-decoration:none} header{background:linear-gradient(90deg,#fff 0%, #fbfdff 100%);border-bottom:1px solid #f0e9ef;position:sticky;top:0;z-index:40} .container{max-width:var(--max-width);margin:0 auto;padding:0 16px} nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0} .brand{display:flex;align-items:center;gap:12px} .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(109,36,91,0.12)} .navlinks{display:flex;gap:12px;align-items:center} .navlinks a{padding:8px 10px;border-radius:8px;font-weight:600} .cta{background:linear-gradient(90deg,var(--brand),var(--accent));color:#fff;padding:8px 12px;border-radius:10px;font-weight:700} /* Mobile hamburger */ .hamburger{display:none;cursor:pointer} .hamburger div{width:22px;height:2px;background:#333;margin:4px 0;border-radius:2px} main{padding:18px 0} /* Carousel */ .hero{position:relative;margin-top:12px} .carousel-viewport{overflow:hidden;border-radius:16px} .carousel{display:flex;align-items:stretch;gap:0;transition:transform 800ms cubic-bezier(.22,.9,.32,1)} .slide{min-width:100%;height:320px;display:flex;align-items:center;padding:24px;color:white;position:relative} .slide .slide-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:16px;z-index:0;display:block} .slide::after{ /* subtle overlay for legibility */ content:"";position:absolute;inset:0;border-radius:16px; background:linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.22) 100%); z-index:1; } .slide .content{max-width:620px;position:relative;z-index:2} .slide h1{margin:0 0 8px;font-size:28px;line-height:1.02} .slide p{margin:0 0 12px;color:rgba(255,255,255,0.95)} .slide .btn{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.15);padding:10px 14px;border-radius:10px;font-weight:700;color:#fff} .dots{position:absolute;bottom:12px;left:16px;display:flex;gap:8px;z-index:10} .dot{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,0.5);cursor:pointer} .dot.active{background:rgba(255,255,255,0.95)} /* Sections */ section{padding:36px 0} .grid{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start} .card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(25,20,30,0.04)} /* Product showcase */ .product-media{display:flex;flex-direction:column;gap:12px} .product-image{border-radius:12px;background:linear-gradient(180deg,#fff,#fff);height:320px;display:flex;align-items:center;justify-content:center;border:1px solid #f3eef2} .price{font-size:22px;font-weight:800;color:var(--brand)} .specs{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px} .spec{background:#f3f8ff;border:1px solid #e5f2ff;padding:8px 10px;border-radius:10px;font-weight:700;color:var(--accent)} /* Footer */ footer{margin-top:40px;background:#fff;padding:24px 0;border-top:1px solid #efe4ec} .footer-grid{display:flex;gap:20px;flex-wrap:wrap} /* modal */ .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;padding:18px;z-index:90} .modal{background:white;border-radius:12px;max-width:480px;width:100%;padding:18px} .modal h3{margin-top:0} .form-row{display:flex;gap:10px;flex-wrap:wrap} .form-row input{flex:1;padding:10px;border-radius:8px;border:1px solid #eee} /* responsive */ @media (max-width:900px){ .grid{grid-template-columns:1fr;} .product-image{height:260px} } @media (max-width:700px){ .navlinks{display:none} .hamburger{display:block} .slide{height:260px} .logo{width:42px;height:42px;font-size:16px} .slide h1{font-size:20px} } /* small touches */ .muted{color:var(--muted)} .flex{display:flex;align-items:center;gap:12px} input,textarea,select{font-family:inherit} .btn-primary{background:linear-gradient(90deg,var(--brand),var(--accent));border:none;color:white;padding:10px 14px;border-radius:10px;font-weight:700} .whatsapp{background:#25D366;color:white;padding:10px 14px;border-radius:10px;font-weight:800;border:none} </style> </head> <body> <header> <div class="container"> <nav> <div class="brand"> <div class="logo">OXI</div> <div> <div style="font-weight:800">Oxibrite</div> <div style="font-size:12px;color:var(--muted);margin-top:2px">Comfort & Confidence</div> </div> </div> <div class="navlinks" id="navlinks"> <a href="#home">Home</a> <a href="#about">About Us</a> <a href="#product">Product</a> <a href="#help">Help & Service</a> <a href="#contact">Contact Us</a> <button class="cta" id="orderBtn">Order via WhatsApp</button> </div> <div class="hamburger" id="hamburger" aria-label="open menu" role="button"> <div></div><div></div><div></div> </div> </nav> </div> </header> <main class="container"> <!-- HERO / Home --> <section id="home" class="hero"> <div class="carousel-viewport"> <div class="carousel" id="carousel"> <!-- Slide 1: replace src with your image or local path --> <div class="slide s1" aria-hidden="false"> <img class="slide-img" src="OXI Brite.png" alt="woman smiling - Oxibrite" loading="lazy" /> <div class="content"> <h1>Oxi Brite .</h1> <p>No.1 sanitary pad — <br> all-day comfort.</p> <div class="flex"> </div> </div> </div> <!-- Slide 2 --> <div class="slide s2"> <img class="slide-img" src="2img.png" alt="active lifestyle - Oxibrite" loading="lazy" /> <div class="content"> <br> <br> <h1>Soft & Comfort</h1> <p>high Observation </p> </div> </div> <!-- Slide 3 --> <div class="slide s3"> <img class="slide-img" src="3img.png" alt="trusted protection - Oxibrite" loading="lazy" /> <div class="content"> <br> <h1>Special Offer</h1> <p>MRP-999 <br> Offer Price Rs: 520</p> </div> </div> </div> </div> <div class="dots" id="dots"> <div class="dot active" data-index="0" aria-label="slide 1"></div> <div class="dot" data-index="1" aria-label="slide 2"></div> <div class="dot" data-index="2" aria-label="slide 3"></div> </div> </section> <!-- About --> <section id="about"> <div class="grid"> <div> <h2>About Oxibrite</h2> <div class="card"> <p class="muted">Oxibrite was created with one simple mission: give women a comfortable, reliable and affordable sanitary pad that fits into everyday life. We focus on soft materials, high absorption and responsible manufacturing.</p> <ul style="margin-top:12px"> <li>Soft top layer for gentle skin contact</li> <li>Super-absorbent core for leak-proof protection</li> <li>Secure adhesive wings and flexible fit</li> </ul> </div> </div> <aside> <div class="card"> <h3>Overview</h3> <p class="muted">Why choose Oxi Brite Sanitary pad.</p> <div class="overview-steps" style="margin-top:16px; display:grid; grid-template-columns:repeat(auto-fit, minmax(100px,1fr)); gap:14px;"> <!-- Step 1 --> <div class="step"> <img src="1re.png" alt="Step 1 - Open the pad" style="width:100%;border-radius:10px;object-fit:cover;"> <p style="margin-top:6px;text-align:center;font-weight:600;color:#6d245b;">Soft & Comfort</p> </div> <!-- Step 2 --> <div class="step"> <img src="2re.png" alt="Step 2 - Place securely" style="width:100%;border-radius:10px;object-fit:cover;"> <p style="margin-top:6px;text-align:center;font-weight:600;color:#6d245b;">high absorption</p> </div> <!-- Step 3 --> <div class="step"> <img src="3re.png" alt="Step 3 - Stay comfortable" style="width:100%;border-radius:10px;object-fit:cover;"> <p style="margin-top:6px;text-align:center;font-weight:600;color:#6d245b;">Fast Dry</p> </div> </div> </div> </aside> </div> </section> <!-- Product --> <section id="product"> <h2>Product</h2> <div class="grid"> <div> <div class="card product-media"> <div class="product-image" role="img" aria-label="oxibrite sanitary pad image"> <!-- Replace the src value with your image path or URL --> <img src="oxi.png" alt="Oxibrite sanitary pad" style="width:100%;height:100%;object-fit:contain;border-radius:10px;display:block" loading="lazy" /> </div> <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;flex-wrap:wrap;gap:12px"> <div> <div style="font-size:18px;font-weight:800">Oxibrite Sanitary Pad</div> <div class="muted">Soft & Comfortable (Protect- ITCHING AND INFECTION) — XL pack sizes</div> </div> <div class="price">₹520/ 20 pack</div> </div> <p style="margin-top:12px">Features: breathable cotton-like cover, ultra-absorbent core, soft side barriers, secure wings. Ideal for daily wear and active lifestyles.</p> <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap"> <button class="whatsapp" id="orderBtnInterior">Order via WhatsApp</button> </div> </div> <!-- STAR RATING + BADGES --> <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px"> <div style="display:flex;align-items:center;gap:4px"> <div style="color:#ffb400;font-weight:800">★★★★☆</div> <div style="font-size:13px;color:#666">4.2 (1.8k reviews)</div> </div> <div style="display:flex;gap:6px;align-items:center"> <div style="padding:6px 8px;border-radius:8px;background:#f6f6ff;color:#6d245b;font-weight:700">Dermatologist tested</div> <div style="padding:6px 8px;border-radius:8px;background:#f0fbff;color:#1182b4;font-weight:700">Made in India</div> </div> </div> <div style="margin-top:18px" class="card"> <h3>How to use</h3> <ol> <li>Open wrapper and place pad centered inside underwear.</li> <li>Remove paper backing and stick wings (if included) to secure.</li> <li>Change every 4–6 hours or as needed.</li> </ol> </div> </div> <aside> <div class="card"> <h3>Need help choosing?</h3> <p class="muted"> If you're not sure which pack size to buy, contact our customer support — we’ll recommend based on your needs. </p> <div style="margin-top:12px"> <strong>Customer Support</strong> <p class="muted" style="margin:6px 0;">Mon–Saturday: 10:30 AM – 6:00 PM</p> <p class="muted" style="margin:6px 0;"> 📞 <a href="tel:+919671228883" style="color:#6d245b;font-weight:600;">+91 96712 28883</a> </p> <a href="#contact" style="color:#1182b4;font-weight:600;">Contact us</a> </div> </div> </aside> </div> </section> <!-- Help & Service --> <section id="help"> <h2>Help & Service</h2> <div class="card"> <h3>FAQs</h3> <details style="margin:8px 0"><summary>Are Oxibrite pads safe for sensitive skin?</summary><div class="muted" style="margin-top:8px">Yes — our top layer is soft, breathable and dermatologically tested.</div></details> <details style="margin:8px 0"><summary>How often should I change the pad?</summary><div class="muted" style="margin-top:8px">Change every 4–6 hours or sooner if it becomes saturated.</div></details> <details style="margin:8px 0"><summary>Where are you shipped from?</summary><div class="muted" style="margin-top:8px">We ship from our distribution centers across India. Delivery times vary by city.</div></details> </div> </section> <!-- Contact --> <section id="contact"> <h2>Contact Us</h2> <div class="card"> <form id="contactForm"> <div class="form-row" style="flex-direction:column"> <input type="text" id="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:8px" /> <input type="email" id="email" placeholder="Email" required style="padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:8px" /> <textarea id="message" rows="4" placeholder="Your message" style="padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:8px"></textarea> <div style="display:flex;gap:10px;flex-wrap:wrap"> <button class="btn-primary" type="submit">Send message</button> <button type="button" class="btn" onclick="document.getElementById('contactForm').reset()">Reset</button> </div> <div id="formMsg" style="margin-top:10px;color:green;display:none">Thanks — we'll reply soon.</div> </div> </form> </div> </section> </main> <footer> <div class="container"> <div class="footer-grid"> <div style="flex:1"> <div style="font-weight:800">Oxibrite</div> <div style="margin-top:6px;color:var(--muted)">Comfort & Confidence</div> </div> <div style="min-width:220px"> <strong>Menu</strong> <div style="margin-top:6px" class="muted">Home · About Us · Product · Help & Service · Contact Us</div> </div> <div style="min-width:220px"> <strong>Contact</strong> <div class="muted" style="margin-top:6px">support@oxibrite.example</div> <div class="muted">+91 96712 28883</div> </div> </div> <div style="margin-top:12px;color:var(--muted);font-size:13px">© Oxibrite — All rights reserved</div> </div> </footer> <!-- Order modal --> <div class="modal-overlay" id="modalOverlay" aria-hidden="true"> <div class="modal" role="dialog" aria-modal="true" aria-labelledby="orderTitle"> <h3 id="orderTitle">Order Oxibrite via WhatsApp</h3> <p class="muted">Enter your delivery details. We'll open WhatsApp with a prefilled order message.</p> <form id="orderForm"> <div class="form-row" style="margin-top:12px;flex-direction:column"> <input type="text" id="o_name" placeholder="Name" required /> <input type="text" id="o_city" placeholder="City" required /> <input type="text" id="o_house" placeholder="House / Flat no." required /> <input type="text" id="o_pincode" placeholder="Pincode" required /> <input type="text" id="o_nearby" placeholder="Near by (landmark)" required /> <input type="tel" id="o_mobile" placeholder="Mobile no" pattern="[0-9+ ]{7,20}" required /> </div> <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px"> <button type="button" class="btn" id="closeModal">Cancel</button> <button type="submit" class="btn-primary">Submit & Open WhatsApp</button> </div> </form> </div> </div> <script> (function(){ const carousel = document.getElementById('carousel'); const dots = Array.from(document.querySelectorAll('.dot')); let index = 0; const total = carousel.children.length; let timer = null; function go(i){ index = (i + total) % total; carousel.style.transform = translateX(${-index * 100}%); dots.forEach(d=>d.classList.remove('active')); dots[index].classList.add('active'); } function start(){ timer = setInterval(()=>go(index+1), 3000); } function stop(){ if(timer){clearInterval(timer);timer=null;} } start(); carousel.addEventListener('mouseover', stop); carousel.addEventListener('mouseout', start); dots.forEach(d=>d.addEventListener('click', ()=>{go(Number(d.dataset.index));})); // Mobile menu toggle const hamburger = document.getElementById('hamburger'); const navlinks = document.getElementById('navlinks'); hamburger && hamburger.addEventListener('click', ()=>{ if(navlinks.style.display === 'flex') navlinks.style.display='none'; else navlinks.style.display='flex'; navlinks.style.flexDirection = 'column'; navlinks.style.position = 'absolute'; navlinks.style.right = '16px'; navlinks.style.top = '64px'; navlinks.style.background = 'white'; navlinks.style.padding = '12px'; navlinks.style.borderRadius = '10px'; navlinks.style.boxShadow = '0 8px 28px rgba(20,10,20,0.06)'; }); // Contact form (site contact) const form = document.getElementById('contactForm'); form.addEventListener('submit', function(e){ e.preventDefault(); const name = document.getElementById('name').value.trim(); const email = document.getElementById('email').value.trim(); if(!name || !email){ alert('Please enter name and email'); return; } document.getElementById('formMsg').style.display='block'; form.reset(); }); // Order modal logic const modalOverlay = document.getElementById('modalOverlay'); const orderBtn = document.getElementById('orderBtn'); const orderBtnInterior = document.getElementById('orderBtnInterior'); const closeModal = document.getElementById('closeModal'); const orderForm = document.getElementById('orderForm'); const WHATSAPP_NUMBER = '919671228883'; // international without + function openModal(){ modalOverlay.style.display='flex'; modalOverlay.setAttribute('aria-hidden','false'); document.getElementById('o_name').focus(); } function hideModal(){ modalOverlay.style.display='none'; modalOverlay.setAttribute('aria-hidden','true'); } [orderBtn, orderBtnInterior].forEach(b=>b && b.addEventListener('click', openModal)); closeModal && closeModal.addEventListener('click', hideModal); orderForm.addEventListener('submit', function(e){ e.preventDefault(); const name = encodeURIComponent(document.getElementById('o_name').value.trim()); const city = encodeURIComponent(document.getElementById('o_city').value.trim()); const house = encodeURIComponent(document.getElementById('o_house').value.trim()); const pincode = encodeURIComponent(document.getElementById('o_pincode').value.trim()); const nearby = encodeURIComponent(document.getElementById('o_nearby').value.trim()); const mobile = encodeURIComponent(document.getElementById('o_mobile').value.trim()); if(!name||!city||!house||!pincode||!nearby||!mobile){ alert('Please fill all fields'); return; } const message = Hello Oxibrite team, I would like to order Oxibrite sanitary pads.%0A%0AName: ${name}%0ACity: ${city}%0AHouse No: ${house}%0APincode: ${pincode}%0ANearby (landmark): ${nearby}%0AMobile: ${mobile}%0A%0APlease confirm availability and delivery.; // encode message for URL const encodedMessage = encodeURIComponent(message); const waLink = https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}; // Open WhatsApp in new tab (mobile will open the app) window.open(waLink, '_blank'); hideModal(); }); // Smooth in-page links document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.addEventListener('click', function(e){ const target = this.getAttribute('href'); if(target.length>1){ e.preventDefault(); document.querySelector(target).scrollIntoView({behavior:'smooth'}); if(window.innerWidth<700 && navlinks){navlinks.style.display='none'} } }) }) // Accessibility: allow left/right arrow to change slides window.addEventListener('keydown', (e)=>{ if(e.key === 'ArrowRight') go(index+1); if(e.key === 'ArrowLeft') go(index-1); if(e.key === 'Escape') hideModal(); }); })(); </script> </body> </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oxibrite Sanitary Pad — Comfort & Confidence</title>
+  <meta name="description" content="Oxibrite sanitary pad — comfortable, leak-proof, breathable. Official product page." />
+  <style>
+    :root{
+      --brand:#6d245b; /* deep purple */
+      --accent:#1182b4; /* bright blue */
+      --muted:#6b6b6b;
+      --bg:#fffdfc;
+      --max-width:1100px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#fff 0%, #f9fbff 100%); color:#222}
+    a{color:var(--brand);text-decoration:none}
+    header{background:linear-gradient(90deg,#fff 0%, #fbfdff 100%);border-bottom:1px solid #f0e9ef;position:sticky;top:0;z-index:40}
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 16px}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(109,36,91,0.12)}
+    .navlinks{display:flex;gap:12px;align-items:center}
+    .navlinks a{padding:8px 10px;border-radius:8px;font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--brand),var(--accent));color:#fff;padding:8px 12px;border-radius:10px;font-weight:700;border:none;cursor:pointer}
+
+    /* Shake animation for order buttons */
+    @keyframes shake {
+      0% { transform: translateX(0) rotate(0deg); }
+      15% { transform: translateX(-4px) rotate(-1deg); }
+      30% { transform: translateX(4px) rotate(1deg); }
+      45% { transform: translateX(-3px) rotate(-0.7deg); }
+      60% { transform: translateX(3px) rotate(0.7deg); }
+      75% { transform: translateX(-2px) rotate(-0.4deg); }
+      100% { transform: translateX(0) rotate(0deg); }
+    }
+    /* apply subtle infinite shake; reduce on very small screens */
+    #orderBtn, #orderBtnInterior {
+      animation: shake 2.4s ease-in-out infinite;
+      will-change: transform;
+    }
+    @media (max-width:420px) {
+      #orderBtn, #orderBtnInterior { animation-duration: 3.6s; } /* slower on tiny screens */
+    }
+
+    /* Mobile hamburger */
+    .hamburger{display:none;cursor:pointer}
+    .hamburger div{width:22px;height:2px;background:#333;margin:4px 0;border-radius:2px}
+
+    main{padding:18px 0}
+
+    /* Carousel */
+    .hero{position:relative;margin-top:12px}
+    .carousel-viewport{overflow:hidden;border-radius:16px}
+    .carousel{display:flex;align-items:stretch;gap:0;transition:transform 800ms cubic-bezier(.22,.9,.32,1)}
+    .slide{min-width:100%;height:320px;display:flex;align-items:center;padding:24px;color:white;position:relative}
+    .slide .slide-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:16px;z-index:0;display:block}
+    .slide::after{ /* subtle overlay for legibility */ 
+      content:"";position:absolute;inset:0;border-radius:16px;
+      background:linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.22) 100%);
+      z-index:1;
+    }
+    .slide .content{max-width:620px;position:relative;z-index:2}
+    .slide h1{margin:0 0 8px;font-size:28px;line-height:1.02}
+    .slide p{margin:0 0 12px;color:rgba(255,255,255,0.95)}
+    .slide .btn{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.15);padding:10px 14px;border-radius:10px;font-weight:700;color:#fff}
+
+    .dots{position:absolute;bottom:12px;left:16px;display:flex;gap:8px;z-index:10}
+    .dot{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,0.5);cursor:pointer}
+    .dot.active{background:rgba(255,255,255,0.95)}
+
+    /* Sections */
+    section{padding:36px 0}
+    .grid{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start}
+    .card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(25,20,30,0.04)}
+
+    /* Product showcase */
+    .product-media{display:flex;flex-direction:column;gap:12px}
+    .product-image{border-radius:12px;background:linear-gradient(180deg,#fff,#fff);height:320px;display:flex;align-items:center;justify-content:center;border:1px solid #f3eef2}
+    .price{font-size:22px;font-weight:800;color:var(--brand)}
+    .specs{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .spec{background:#f3f8ff;border:1px solid #e5f2ff;padding:8px 10px;border-radius:10px;font-weight:700;color:var(--accent)}
+
+    /* Footer */
+    footer{margin-top:40px;background:#fff;padding:24px 0;border-top:1px solid #efe4ec}
+    .footer-grid{display:flex;gap:20px;flex-wrap:wrap}
+
+    /* modal */
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;padding:18px;z-index:90}
+    .modal{background:white;border-radius:12px;max-width:480px;width:100%;padding:18px}
+    .modal h3{margin-top:0}
+    .form-row{display:flex;gap:10px;flex-wrap:wrap}
+    .form-row input{flex:1;padding:10px;border-radius:8px;border:1px solid #eee}
+
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      .product-image{height:260px}
+    }
+    @media (max-width:700px){
+      .navlinks{display:none}
+      .hamburger{display:block}
+      .slide{height:260px}
+      .logo{width:42px;height:42px;font-size:16px}
+      .slide h1{font-size:20px}
+    }
+
+    /* small touches */
+    .muted{color:var(--muted)}
+    .flex{display:flex;align-items:center;gap:12px}
+    input,textarea,select{font-family:inherit}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--accent));border:none;color:white;padding:10px 14px;border-radius:10px;font-weight:700}
+    .whatsapp{background:#25D366;color:white;padding:10px 14px;border-radius:10px;font-weight:800;border:none;cursor:pointer}
+    
+
+  /* Scoped styles — you can move to your main CSS */
+  .live-view-card{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:10px 14px;
+    border-radius:12px;
+    background:linear-gradient(90deg, rgba(17,130,180,0.06), rgba(109,36,91,0.03));
+    box-shadow:0 8px 24px rgba(16,24,40,0.06);
+    border:1px solid rgba(17,130,180,0.06);
+    font-weight:700;
+    min-width:170px;
+  }
+  .live-icon{
+    width:46px;height:46px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,var(--brand),var(--accent));
+    color:white;flex:0 0 46px;box-shadow:0 6px 18px rgba(17,130,180,0.14);
+  }
+  .live-meta{line-height:1}
+  .live-meta .label{font-size:12px;color:var(--muted);font-weight:600}
+  .live-meta .count{font-size:18px;color:var(--brand);font-weight:900;letter-spacing:0.4px}
+  .live-dot{
+    width:10px;height:10px;border-radius:50%;background:#28c76f;box-shadow:0 0 12px rgba(40,199,111,0.18);
+    margin-left:8px;flex:0 0 auto;
+    animation:livePulse 1.9s infinite;
+  }
+  @keyframes livePulse{
+    0%{transform:scale(1);opacity:1}
+    50%{transform:scale(1.25);opacity:0.8}
+    100%{transform:scale(1);opacity:1}
+  }
+
+  /* small responsive tweak */
+  @media (max-width:420px){
+    .live-view-card{min-width:140px;padding:8px 10px}
+    .live-icon{width:40px;height:40px}
+    .live-meta .count{font-size:16px}
+  }
+
+
+  @keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo">OXI</div>
+          <div>
+            <div style="font-weight:800">Oxibrite</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:2px">Comfort & Confidence</div>
+          </div>
+        </div>
+        <div class="navlinks" id="navlinks">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#product">Product</a>
+          <a href="#help">Help & Service</a>
+          <a href="#contact">Contact Us</a>
+          <button class="cta" id="orderBtn">Order via WhatsApp</button>
+        </div>
+        <div class="hamburger" id="hamburger" aria-label="open menu" role="button">
+          <div></div><div></div><div></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO / Home -->
+    <section id="home" class="hero">
+      <div class="carousel-viewport">
+        <div class="carousel" id="carousel">
+          <!-- Slide 1: replace src with your image or local path -->
+          <div class="slide s1" aria-hidden="false">
+            <img
+              class="slide-img"
+              src="OXI Brite.png"
+              alt="woman smiling - Oxibrite"
+              loading="lazy"
+            />
+            <div class="content">
+              <h1>Oxi Brite .</h1>
+              <p>No.1 sanitary pad — <br> all-day comfort.</p>
+              <div class="flex">
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide s2">
+            <img
+              class="slide-img"
+              src="2img.png"
+              alt="active lifestyle - Oxibrite"
+              loading="lazy"
+            />
+            <div class="content">
+                <br>
+                <br>
+              <h1>Soft & Comfort</h1>
+              
+              <p>high Observation </p>
+              
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide s3">
+            <img
+              class="slide-img"
+              src="3img.png"
+              alt="trusted protection - Oxibrite"
+              loading="lazy"
+            />
+            <div class="content">
+                <br>
+            
+              <h1>Special Offer</h1>
+              <p>MRP-999 <br>
+            Offer Price Rs: 520</p>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dots" id="dots">
+        <div class="dot active" data-index="0" aria-label="slide 1"></div>
+        <div class="dot" data-index="1" aria-label="slide 2"></div>
+        <div class="dot" data-index="2" aria-label="slide 3"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="grid">
+        <div>
+          <h2>About Oxibrite</h2>
+          <div class="card">
+            <p class="muted">Oxibrite was created with one simple mission: give women a comfortable, reliable and affordable sanitary pad that fits into everyday life. We focus on soft materials, high absorption and responsible manufacturing.</p>
+            <ul style="margin-top:12px">
+              <li>Soft top layer for gentle skin contact</li>
+              <li>Super-absorbent core for leak-proof protection</li>
+              <li>Secure adhesive wings and flexible fit</li>
+            </ul>
+          </div>
+        </div>
+        <aside>
+  <div class="card">
+    <h3>Overview</h3>
+    <p class="muted">Why choose Oxi Brite Sanitary pad.</p>
+
+    <div class="overview-steps" style="margin-top:16px; display:grid; grid-template-columns:repeat(auto-fit, minmax(100px,1fr)); gap:14px;">
+      <!-- Step 1 -->
+      <div class="step">
+        <img src="1re.png" alt="Step 1 - Open the pad" style="width:100%;border-radius:10px;object-fit:cover;">
+        <p style="margin-top:6px;text-align:center;font-weight:600;color:#6d245b;">Soft & Comfort</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step">
+        <img src="2re.png" alt="Step 2 - Place securely" style="width:100%;border-radius:10px;object-fit:cover;">
+        <p style="margin-top:6px;text-align:center;font-weight:600;color:#6d245b;">high absorption</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step">
+        <img src="3re.png" alt="Step 3 - Stay comfortable" style="width:100%;border-radius:10px;object-fit:cover;">
+        <p style="margin-top:6px;text-align:center;font-weight:600;color:#6d245b;">Fast Dry</p>
+      </div>
+    </div>
+  </div>
+</aside>
+<!-- HAPPY CUSTOMERS — CLEAN PROFESSIONAL SECTION -->
+<section style="padding:50px 0;background:linear-gradient(180deg,#ffffff 0%,#f7faff 100%);">
+  <div class="container" style="text-align:center;">
+    
+    <div style="
+      display:inline-block;
+      padding:30px 40px;
+      border-radius:18px;
+      background:white;
+      border:1px solid #e9eef4;
+      box-shadow:0 10px 28px rgba(17,130,180,0.10);
+      animation:fadeIn 0.6s ease-out;
+    ">
+      
+      <div style="font-size:42px;font-weight:900;
+        background:linear-gradient(90deg,#6d245b,#1182b4);
+        -webkit-background-clip:text;
+        color:transparent;
+        letter-spacing:1px;
+      " id="hcCounter">
+        0+
+      </div>
+
+      <div style="font-size:18px;color:#444;margin-top:4px;font-weight:600;">
+        Happy Customers
+      </div>
+
+    </div>
+
+  </div>
+</section>
+      </div>
+    </section>
+
+    <!-- Product -->
+    <section id="product">
+      <h2>Product</h2>
+      <div class="grid">
+        <div>
+          <div class="card product-media">
+           <div class="product-image" role="img" aria-label="oxibrite sanitary pad image">
+  <!-- Replace the src value with your image path or URL -->
+  <img
+    src="oxi.png"
+    alt="Oxibrite sanitary pad"
+    style="width:100%;height:100%;object-fit:contain;border-radius:10px;display:block"
+    loading="lazy"
+  />
+</div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;flex-wrap:wrap;gap:12px">
+              <div>
+                <div style="font-size:18px;font-weight:800">Oxibrite Sanitary Pad</div>
+                <div class="muted">Soft & Comfortable (Protect- ITCHING AND INFECTION) — XL pack sizes</div>
+              </div>
+              <div class="price">₹520/ 20 pack</div>
+            </div>
+                <div class="live-view-card" role="status" aria-live="polite" aria-atomic="true" id="liveViewPro">
+  <div class="live-icon" aria-hidden="true">
+    <!-- simple eye SVG -->
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block">
+      <path d="M12 5C7 5 3.2 8.2 1 12c2.2 3.8 6 7 11 7s8.8-3.2 11-7c-2.2-3.8-6-7-11-7z" stroke="rgba(255,255,255,0.95)" stroke-width="1.1" fill="rgba(255,255,255,0.06)"/>
+      <circle cx="12" cy="12" r="3.2" fill="white"/>
+    </svg>
+  </div>
+
+  <div class="live-meta">
+    <div class="label">Viewing now</div>
+    <div class="count" id="liveProCount">100+</div>
+  </div>
+
+  <div class="live-dot" id="liveProDot" aria-hidden="true"></div>
+</div>
+            <p style="margin-top:12px">Features: breathable cotton-like cover, ultra-absorbent core, soft side barriers, secure wings. Ideal for daily wear and active lifestyles.</p>
+            <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+              <button class="whatsapp" id="orderBtnInterior">Order via WhatsApp</button>
+             
+            </div>
+          </div>
+
+          <!-- STAR RATING + BADGES -->
+<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px">
+  <div style="display:flex;align-items:center;gap:4px">
+    <div style="color:#ffb400;font-weight:800">★★★★☆</div>
+    <div style="font-size:13px;color:#666">4.2 (1.8k reviews)</div>
+  </div>
+  <div style="display:flex;gap:6px;align-items:center">
+    <div style="padding:6px 8px;border-radius:8px;background:#f6f6ff;color:#6d245b;font-weight:700">Dermatologist tested</div>
+    <div style="padding:6px 8px;border-radius:8px;background:#f0fbff;color:#1182b4;font-weight:700">Made in India</div>
+  </div>
+</div>
+
+
+          <div style="margin-top:18px" class="card">
+            <h3>How to use</h3>
+            <ol>
+              <li>Open wrapper and place pad centered inside underwear.</li>
+              <li>Remove paper backing and stick wings (if included) to secure.</li>
+              <li>Change every 4–6 hours or as needed.</li>
+            </ol>
+          </div>
+        </div>
+        
+
+        <aside>
+  <div class="card">
+    <h3>Need help choosing?</h3>
+    <p class="muted">
+      If you're not sure which pack size to buy, contact our customer support — we’ll recommend based on your needs.
+    </p>
+
+    <div style="margin-top:12px">
+      <strong>Customer Support</strong>
+      <p class="muted" style="margin:6px 0;">Mon–Saturday: 10:30 AM – 6:00 PM</p>
+      <p class="muted" style="margin:6px 0;">
+        📞 <a href="tel:+919671228883" style="color:#6d245b;font-weight:600;">+91 96712 28883</a>
+      </p>
+      <a href="#contact" style="color:#1182b4;font-weight:600;">Contact us</a>
+    </div>
+  </div>
+</aside>
+
+      </div>
+    </section>
+
+    <!-- Help & Service -->
+    <section id="help">
+      <h2>Help & Service</h2>
+      <div class="card">
+        <h3>FAQs</h3>
+        <details style="margin:8px 0"><summary>Are Oxibrite pads safe for sensitive skin?</summary><div class="muted" style="margin-top:8px">Yes — our top layer is soft, breathable and dermatologically tested.</div></details>
+        <details style="margin:8px 0"><summary>How often should I change the pad?</summary><div class="muted" style="margin-top:8px">Change every 4–6 hours or sooner if it becomes saturated.</div></details>
+        <details style="margin:8px 0"><summary>Where are you shipped from?</summary><div class="muted" style="margin-top:8px">We ship from our distribution centers across India. Delivery times vary by city.</div></details>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="card">
+        <form id="contactForm">
+          <div class="form-row" style="flex-direction:column">
+            <input type="text" id="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:8px" />
+            <input type="email" id="email" placeholder="Email" required style="padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:8px" />
+            <textarea id="message" rows="4" placeholder="Your message" style="padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:8px"></textarea>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button class="btn-primary" type="submit">Send message</button>
+              <button type="button" class="btn" onclick="document.getElementById('contactForm').reset()">Reset</button>
+            </div>
+            <div id="formMsg" style="margin-top:10px;color:green;display:none">Thanks — we'll reply soon.</div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div style="flex:1">
+          <div style="font-weight:800">Oxibrite</div>
+          <div style="margin-top:6px;color:var(--muted)">Comfort & Confidence</div>
+        </div>
+        <div style="min-width:220px">
+          <strong>Menu</strong>
+          <div style="margin-top:6px" class="muted">Home · About Us · Product · Help & Service · Contact Us</div>
+        </div>
+        <div style="min-width:220px">
+          <strong>Contact</strong>
+          <div class="muted" style="margin-top:6px">support@oxibrite.example</div>
+          <div class="muted">+91 96712 28883</div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">© Oxibrite — All rights reserved</div>
+    </div>
+  </footer>
+
+ <!-- Order modal -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+    <h3 id="orderTitle">Order Oxibrite via WhatsApp</h3>
+    <p class="muted">Enter your delivery details. We'll open WhatsApp with a prefilled order message.</p>
+
+    <form id="orderForm">
+      <div class="form-row" style="margin-top:12px;flex-direction:column">
+
+        <input type="text" id="o_name" placeholder="Name" required />
+        <input type="text" id="o_city" placeholder="City" required />
+        <input type="text" id="o_house" placeholder="House / Flat no." required />
+        <input type="text" id="o_pincode" placeholder="Pincode" required />
+        <input type="text" id="o_nearby" placeholder="Near by (landmark)" required />
+        <input type="tel" id="o_mobile" placeholder="Mobile no" pattern="[0-9+ ]{7,20}" required />
+
+        <!-- ✅ NEW QUANTITY FIELD -->
+        <select id="o_quantity" required 
+          style="padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px">
+          <option value="" disabled selected>Select Quantity</option>
+          <option value="20">20 Pads</option>
+          <option value="30">30 Pads</option>
+          <option value="40">40 Pads</option>
+          <option value="50">50 Pads</option>
+          <option value="60">60 Pads</option>
+          <option value="70">70 Pads</option>
+          <option value="80">80 Pads</option>
+          <option value="90">90 Pads</option>
+          <option value="100">100 Pads</option>
+        </select>
+
+      </div>
+
+      <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
+        <button type="button" class="btn" id="closeModal">Cancel</button>
+        <button type="submit" class="btn-primary">Submit & Open WhatsApp</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+  <script>
+    (function(){
+      const carousel = document.getElementById('carousel');
+      const dots = Array.from(document.querySelectorAll('.dot'));
+      let index = 0;
+      const total = carousel.children.length;
+      let timer = null;
+
+      function go(i){
+        index = (i + total) % total;
+        carousel.style.transform = `translateX(${-index * 100}%)`;
+        dots.forEach(d=>d.classList.remove('active'));
+        dots[index].classList.add('active');
+      }
+      function start(){ timer = setInterval(()=>go(index+1), 3000); }
+      function stop(){ if(timer){clearInterval(timer);timer=null;} }
+
+      start();
+      carousel.addEventListener('mouseover', stop);
+      carousel.addEventListener('mouseout', start);
+      dots.forEach(d=>d.addEventListener('click', ()=>{go(Number(d.dataset.index));}));
+
+      // Mobile menu toggle
+      const hamburger = document.getElementById('hamburger');
+      const navlinks = document.getElementById('navlinks');
+      hamburger && hamburger.addEventListener('click', ()=>{
+        if(navlinks.style.display === 'flex') navlinks.style.display='none'; else navlinks.style.display='flex';
+        navlinks.style.flexDirection = 'column';
+        navlinks.style.position = 'absolute';
+        navlinks.style.right = '16px';
+        navlinks.style.top = '64px';
+        navlinks.style.background = 'white';
+        navlinks.style.padding = '12px';
+        navlinks.style.borderRadius = '10px';
+        navlinks.style.boxShadow = '0 8px 28px rgba(20,10,20,0.06)';
+      });
+
+      // Contact form (site contact)
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        if(!name || !email){ alert('Please enter name and email'); return; }
+        document.getElementById('formMsg').style.display='block';
+        form.reset();
+      });
+
+     // Order modal logic
+const modalOverlay = document.getElementById('modalOverlay');
+const orderBtn = document.getElementById('orderBtn');
+const orderBtnInterior = document.getElementById('orderBtnInterior');
+const closeModal = document.getElementById('closeModal');
+const orderForm = document.getElementById('orderForm');
+const WHATSAPP_NUMBER = '919671228883'; // international without +
+
+function openModal(){ 
+  modalOverlay.style.display='flex'; 
+  modalOverlay.setAttribute('aria-hidden','false'); 
+  document.getElementById('o_name').focus(); 
+}
+
+function hideModal(){ 
+  modalOverlay.style.display='none'; 
+  modalOverlay.setAttribute('aria-hidden','true'); 
+}
+
+[orderBtn, orderBtnInterior].forEach(b=>b && b.addEventListener('click', openModal));
+closeModal && closeModal.addEventListener('click', hideModal);
+
+orderForm.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const name = document.getElementById('o_name').value.trim();
+  const city = document.getElementById('o_city').value.trim();
+  const house = document.getElementById('o_house').value.trim();
+  const pincode = document.getElementById('o_pincode').value.trim();
+  const nearby = document.getElementById('o_nearby').value.trim();
+  const mobile = document.getElementById('o_mobile').value.trim();
+  const quantity = document.getElementById('o_quantity').value.trim(); // NEW FIELD
+
+  if(!name||!city||!house||!pincode||!nearby||!mobile||!quantity){
+    alert('Please fill all fields'); 
+    return; 
+  }
+
+  // optional: validate pincode is 6 digits (India)
+  if(!/^\d{6}$/.test(pincode)){ 
+    if(!confirm('Pincode does not look like a 6-digit Indian PIN. Continue?')) return; 
+  }
+
+  const message = 
+`🛍️ Oxibrite Order Request
+
+Name: ${name}
+City: ${city}
+House No: ${house}
+Pincode: ${pincode}
+Nearby (landmark): ${nearby}
+Mobile: ${mobile}
+Quantity: ${quantity} Pads
+
+Please confirm availability and delivery.`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+  window.open(waLink, '_blank');
+  hideModal();
+});
+
+// Smooth in-page links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', function(e){
+    const target = this.getAttribute('href');
+    if(target.length>1){
+      e.preventDefault();
+      document.querySelector(target).scrollIntoView({behavior:'smooth'});
+      if(window.innerWidth<700 && navlinks){navlinks.style.display='none'}
+    }
+  })
+})
+
+
+      // Accessibility: allow left/right arrow to change slides
+      window.addEventListener('keydown', (e)=>{
+        if(e.key === 'ArrowRight') go(index+1);
+        if(e.key === 'ArrowLeft') go(index-1);
+        if(e.key === 'Escape') hideModal();
+      });
+    })();
+  </script>
+  <script>
+(function(){
+  const elCount = document.getElementById('liveProCount');
+  const dot = document.getElementById('liveProDot');
+
+  // start value (professional start between 100 and 400)
+  let real = Math.floor(100 + Math.random()*300);
+  let displayed = real;
+
+  // format with commas and optional + suffix when >=100
+  function format(n){ 
+    const nStr = n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return (n >= 100) ? nStr + '+' : nStr;
+  }
+
+  // smooth tween: animate displayed -> target over duration ms
+  let tweenFrame = null;
+  function tweenTo(target, duration=650){
+    const start = performance.now();
+    const from = displayed;
+    const diff = target - from;
+    if(tweenFrame) cancelAnimationFrame(tweenFrame);
+    function step(now){
+      const t = Math.min(1, (now - start) / duration);
+      // smooth ease-out
+      const eased = 1 - Math.pow(1 - t, 3);
+      displayed = Math.round(from + diff * eased);
+      elCount.textContent = format(displayed);
+      if(t < 1){
+        tweenFrame = requestAnimationFrame(step);
+      } else {
+        displayed = target;
+        elCount.textContent = format(displayed);
+      }
+    }
+    tweenFrame = requestAnimationFrame(step);
+  }
+
+  // realistic random generator: mostly small increases, occasional small decreases
+  function randomDelta(){
+    const r = Math.random();
+    if(r < 0.6) return 1 + Math.floor(Math.random()*3);     // +1..+3 (60%)
+    if(r < 0.85) return -1 * (1 + Math.floor(Math.random()*2)); // -1..-2 (25%)
+    if(r < 0.95) return 0;                                   // 0 (10%)
+    return 4 + Math.floor(Math.random()*6);                  // occasional big jump +4..+9 (5%)
+  }
+
+  // update loop: change every random interval between 900ms and 2600ms
+  let running = true;
+  function scheduleTick(){
+    const delay = 900 + Math.floor(Math.random()*1700); // 900..2600ms
+    setTimeout(()=>{
+      if(!running) return;
+      const delta = randomDelta();
+      real = Math.max(100, real + delta);
+      // choose a target near real (small variance)
+      const target = real + (Math.random() < 0.2 ? Math.floor(Math.random()*2) : 0);
+      tweenTo(target, 600);
+      // dot glow/color feedback on rise/fall
+      if(delta > 0){
+        dot.style.boxShadow = '0 0 14px rgba(40,199,111,0.34)';
+      } else if(delta < 0){
+        dot.style.boxShadow = '0 0 10px rgba(255,165,0,0.16)';
+      } else {
+        dot.style.boxShadow = '0 0 8px rgba(40,199,111,0.22)';
+      }
+      scheduleTick();
+    }, delay);
+  }
+
+  // start initial render
+  elCount.textContent = format(displayed);
+  scheduleTick();
+
+  // pause when not visible to save CPU (IntersectionObserver)
+  if('IntersectionObserver' in window){
+    const iv = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        running = e.isIntersecting;
+        if(running) scheduleTick();
+      });
+    }, {threshold: 0.01});
+    iv.observe(document.getElementById('liveViewPro'));
+  }
+
+  // expose for debugging if needed
+  window._liveViewPro = {
+    getValue: ()=>real,
+    setValue: v => { real = Math.max(100, Math.floor(v)); tweenTo(real); }
+  };
+})();
+</script>
+<script>
+/* Animate counter from 0 → 1000+ when visible */
+(function(){
+  const el = document.getElementById('hcCounter');
+  if(!el) return;
+
+  const target = 1000;
+  let started = false;
+
+  function animate(){
+    if(started) return;
+    started = true;
+
+    let current = 0;
+    const duration = 1200;
+    const start = performance.now();
+
+    function frame(now){
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
+      current = Math.floor(eased * target);
+      el.textContent = current >= 1000 ? "1,000+" : current + "+";
+      if(t < 1){ requestAnimationFrame(frame); }
+    }
+    requestAnimationFrame(frame);
+  }
+
+  if("IntersectionObserver" in window){
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting) animate(); });
+    }, {threshold:0.4});
+    io.observe(el);
+  } else { animate(); }
+
+})();
+</script>
+</body>
+</html>
